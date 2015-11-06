@@ -1,2 +1,2 @@
 # confluence
-Puppet Module for Puppet
+Puppet Module for Confluence
