@@ -35,6 +35,24 @@ confluencewiki::heap_min_size: '512'
 confluencewiki::heap_max_size: '1024'
 confluencewiki::maxmetaspacesize: '256'
 
+# You will want to change the values of below variables 
+# and also move them to an EYAML file yes? !!
+#
+# These variables are referenced from files in the
+# templates directory.
+
+confluencewiki::confluence_license_message: ''
+confluencewiki::confluence_setup_server_id: ''
+confluencewiki::hibernate_connection_password: ''
+confluencewiki::hibernate_connection_username: ''
+confluencewiki::hibernate_connection_url: ''
+
+# Reminder: Unless you are just testing or running a
+# private Confluence Wiki instance you WILL want to 
+# put the above 5 variables in an EYAML file !!
+
+# Apache Config
+
 logrotate::rule:
   apache2:
     ensure: 'present'
