@@ -1,5 +1,5 @@
 # confluence
-Puppet Module for Confluence
+Puppet Module for Atlassian Confluence
 
 #### Table of Contents
 
@@ -39,7 +39,7 @@ The Apache HTTPd Servers ServerAlias.
 Specified in the Confluence setenv.sh file, this is the Java Xms setting.
 #####`heap_max_size`
 Specified in the Confluence setenv.sh file, thi is the Java Xmx setting.
-#####`maxmetspacesize`
+#####`maxmetaspacesize`
 Specified in the Confluence setenv.sh file, this is the Java MaxMetaSpaceSize 
 setting. Note that this is JDK 8 specific and so if you want to use JDK 7 or 
 earlier (not recommended) then replace this with PermGen and MaxPermGen
@@ -67,7 +67,7 @@ filename with the mysql_connector_version.
 You can leave this as is, it constructs the full filename of the Confluence
 version to download.
 #####`tarball`
-You can leave this as is, it contructs the tar file to download.
+You can leave this as is, it constructs the tar file to download.
 #####`download_dir`
 The Directory to download the Confluence tarball into. Default: /tmp
 You may want to change that if /tmp gets cleared out regularly or it
