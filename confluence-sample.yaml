@@ -1,0 +1,74 @@
+---
+classes:
+  - apache
+  - apache::mod::proxy
+  - apache::mod::proxy_http
+  - apache::mod::rewrite
+  - confluencewiki
+
+apache::keepalive:          'On'
+apache::keepalive_timeout:  '15'
+apache::timeout: 600
+apache::mpm_module:         'event'
+
+apache::mod::event::listenbacklog: '511'
+apache::mod::event::maxclients: '50'
+apache::mod::event::maxconnectionsperchild: '20000'
+apache::mod::event::maxrequestworkers: '50'
+apache::mod::event::maxsparethreads: '25'
+apache::mod::event::minsparethreads: '15'
+apache::mod::event::serverlimit: '5'
+apache::mod::event::startservers: '2'
+apache::mod::event::threadlimit: '50'
+apache::mod::event::threadsperchild: '5'
+
+# confluencewiki class variables.
+confluencewiki::confluence_version: '5.8.4'
+confluencewiki::mysql_connector_version: '5.1.11'
+confluencewiki::parent_dir: '/opt/confluence'
+confluencewiki::server_port: '8008'
+confluencewiki::connector_port: '8888'
+confluencewiki::context_path: '/confluence'
+confluencewiki::docroot: '/var/www'
+confluencewiki::server_alias: 'yourdomain.com'
+confluencewiki::heap_min_size: '512'
+confluencewiki::heap_max_size: '1024'
+confluencewiki::maxmetaspacesize: '256'
+
+logrotate::rule:
+  apache2:
+    ensure: 'present'
+
+apache::vhosts::vhosts:
+  confluence-80:
+    vhost_name: '*'
+    priority: '12'
+    servername: 'yourServer.com'
+    serveraliases:
+      - 'yourdomain.com'
+    port: 80
+    ssl: false
+    docroot: '/var/www'
+    error_log_file: 'confluence_error.log'
+    custom_fragment: |
+      RedirectMatch permanent ^/(.*)$ https://yourdomain.com/$1
+
+  confluence-443:
+      vhost_name: '*'
+      default_vhost: true
+      servername: 'yourServer.com'
+      serveraliases:  
+        - 'yourdomain.com'
+      port: 443
+      docroot: '/var/www'
+      error_log_file: 'confluence_error.log'
+      ssl: true
+      ssl_cert: '/etc/ssl/certs/yourdomain.crt'
+      ssl_chain: '/etc/ssl/certs/yourdomain.chain'
+      ssl_key: '/etc/ssl/private/yourdomain.key'
+      custom_fragment: |
+        RewriteEngine On
+        ProxyPass /confluence/ http://127.0.0.1:8888/confluence/
+        ProxyPassReverse /confluence/ http://127.0.0.1:8888/confluence/
+        RewriteCond $1 !(confluence)
+        RewriteRule ^/(.*) https://yourdomain.com/confluence/display/$1 [R=301,L]
