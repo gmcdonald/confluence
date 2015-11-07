@@ -5,6 +5,8 @@ Puppet Module for Confluence
 
 1. [Overview](#overview)
 2. [Parameters](#parameters)
+3. [Contributing](#contributing)
+4. [License](#license)
 
 ##Overview
 
@@ -84,4 +86,15 @@ You can usually leave this as is, based on the `parent_dir` it creates the
 Confluence Home directory.
 #####`current_dir`
 You can leave this as is. It is used to symlink the installation data dir to current.
+
+##Contributing
+Pull Requests Welome!!
+This is an active project so please feel free to offer suggestions, improvements, critique etc. File an Issue if you want something looking into, and for those
+that want to go a bit further, create a Pull Request with your work and it will
+be looked at.
+
+##License
+
+All files contained in this repository are provided under the ASL v2.0 - please read the LICENSE file for what this entitles you to. This also means that any contributions that you provide here via Pull Requests or any other means will also be accepted and provided under those terms.
+
 
