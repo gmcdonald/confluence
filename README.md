@@ -88,7 +88,7 @@ Confluence Home directory.
 You can leave this as is. It is used to symlink the installation data dir to current.
 
 ##Contributing
-Pull Requests Welome!!
+Pull Requests Welcome!!
 This is an active project so please feel free to offer suggestions, improvements, critique etc. File an Issue if you want something looking into, and for those
 that want to go a bit further, create a Pull Request with your work and it will
 be looked at.
