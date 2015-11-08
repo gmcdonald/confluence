@@ -4,14 +4,22 @@ Puppet Module for Atlassian Confluence
 #### Table of Contents
 
 1. [Overview](#overview)
-2. [Parameters](#parameters)
-3. [Contributing](#contributing)
-4. [License](#license)
+2. [Prereqs](#prereqs)
+3. [Parameters](#parameters)
+4. [Contributing](#contributing)
+5. [License](#license)
 
 ##Overview
 
 Installs Atlassian Confluence. Aids in easier upgrades however some
 manual work is still required.
+
+##prereqs
+
+This version of the module assumes you will be using a MySQL database
+and Java JDK 8+
+Only minor tweaks are needed if you want to use Postgres and/or Java 
+JDK 7 (I'll provide different branches/tags for those soon)
 
 ##Parameters
 
