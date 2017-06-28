@@ -32,6 +32,8 @@ Version of Confluence to use.
 ##### `conf_build_number`
 The Build Number of the Confluence Version. This *must* be changed to match
 what the Confluence Version expects.
+See https://developer.atlassian.com/confdev/development-resources/confluence-build-information 
+for build number to Confluence version number.
 ##### `mysql_connector_version`
 Version of the MySQL Connector to use. Currently 5.1.11
 ##### `parent_dir`
