@@ -29,6 +29,9 @@ Listed in order of appearance in the module.
 
 ##### `confluence_version`
 Version of Confluence to use.
+##### `conf_build_number`
+The Build Number of the Confluence Version. This *must* be changed to match
+what the Confluence Version expects.
 ##### `mysql_connector_version`
 Version of the MySQL Connector to use. Currently 5.1.11
 ##### `parent_dir`
