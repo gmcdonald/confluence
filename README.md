@@ -18,9 +18,8 @@ required.
 
 This module is used at the Apache Software Foundation (ASF) as-is.
 The ASF has one of the biggest public Confluence instances around.
-See their YAML file here for a real world implementation.
-
-https://github.com/apache/infrastructure-puppet/blob/deployment/data/nodes/cwiki-vm4.apache.org.yaml 
+See their YAML file [here](
+https://github.com/apache/infrastructure-puppet/blob/deployment/data/nodes/cwiki-vm4.apache.org.yaml) for a real world implementation.
 
 The ASF Confluence instance last upgrade went from 5.8.4 to 5.8.17 and all that was needed was to
 bump the $confluence_version and $conf_build_number, it all 'just worked'. Backups of the $home_dir 
