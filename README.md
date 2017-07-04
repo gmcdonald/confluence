@@ -16,7 +16,7 @@ manual work may be required. (Depending on what version you are going
 from and to would depend if and how much manual intervention may be 
 required.
 
-This module is used at the Apache Software Foundation (ASF) as-is.
+This module is used at the [Apache Software Foundation](https://apache.org) (ASF) as-is.
 The ASF has one of the biggest public Confluence instances around.
 See their YAML file [here](
 https://github.com/apache/infrastructure-puppet/blob/deployment/data/nodes/cwiki-vm4.apache.org.yaml) for a real world implementation.
@@ -43,7 +43,7 @@ Version of Confluence to use.
 ##### `conf_build_number`
 The Build Number of the Confluence Version. This *must* be changed to match
 what the Confluence Version expects.
-See https://developer.atlassian.com/confdev/development-resources/confluence-build-information 
+See the [developer docs](https://developer.atlassian.com/confdev/development-resources/confluence-build-information)
 for build number to Confluence version number.
 ##### `mysql_connector_version`
 Version of the MySQL Connector to use. Currently 5.1.11
