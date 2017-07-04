@@ -4,10 +4,11 @@ Puppet Module for Atlassian Confluence
 #### Table of Contents
 
 1. [Overview](#overview)
-2. [Prereqs](#prereqs)
-3. [Parameters](#parameters)
-4. [Contributing](#contributing)
-5. [License](#license)
+2. [Apache uses this Module!](#asf)
+3. [Prereqs](#prereqs)
+4. [Parameters](#parameters)
+5. [Contributing](#contributing)
+6. [License](#license)
 
 ## Overview
 
@@ -15,6 +16,8 @@ Installs Atlassian Confluence. Aids in easier upgrades however some
 manual work may be required. (Depending on what version you are going 
 from and to would depend if and how much manual intervention may be 
 required.
+
+## asf
 
 This module is used at the [Apache Software Foundation](https://apache.org) (ASF) as-is.
 The ASF has one of the biggest public Confluence instances around.
