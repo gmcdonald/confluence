@@ -22,6 +22,10 @@ See their YAML file here for a real world implementation.
 
 https://github.com/apache/infrastructure-puppet/blob/deployment/data/nodes/cwiki-vm4.apache.org.yaml 
 
+The ASF Confluence instance last upgrade went from 5.8.4 to 5.8.17 and all that was needed was to
+bump the $confluence_version and $conf_build_number, it all 'just worked'. Backups of the $home_dir 
+and $install_dir as well as the database were taken (but happily not needed!)
+
 ## prereqs
 
 This version of the module assumes you will be using a MySQL database
