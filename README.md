@@ -19,7 +19,7 @@ required.
 
 ## asf
 
-This module is used at the [Apache Software Foundation](https://apache.org) (ASF) as-is.
+![ASF Icon](https://www.apache.org/favicons/favicon-32x32.png "ASF Icon") This module is used at the [Apache Software Foundation](https://apache.org) (ASF) as-is.
 The ASF has one of the biggest public Confluence instances around.
 See their YAML file [here](
 https://github.com/apache/infrastructure-puppet/blob/deployment/data/nodes/cwiki-vm4.apache.org.yaml) for a real world implementation.
