@@ -12,7 +12,15 @@ Puppet Module for Atlassian Confluence
 ## Overview
 
 Installs Atlassian Confluence. Aids in easier upgrades however some
-manual work is still required.
+manual work may be required. (Depending on what version you are going 
+from and to would depend if and how much manual intervention may be 
+required.
+
+This module is used at the Apache Software Foundation (ASF) as-is.
+The ASF has one of the biggest public Confluence instances around.
+See their YAML file here for a real world implementation.
+
+https://github.com/apache/infrastructure-puppet/blob/deployment/data/nodes/cwiki-vm4.apache.org.yaml 
 
 ## prereqs
 
